@@ -1,7 +1,7 @@
 /*
  SWAPPING VALUES BETWEEN TWO VARIABLES USING AN AUXILIARY VARIABLE
  */
-package exercise01;
+package exercises;
 
 public class Exercise01 {
     public static void main(String[] args) {
