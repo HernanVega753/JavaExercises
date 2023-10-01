@@ -35,30 +35,31 @@ public class Exercise07 {
         
         if (opcion.startsWith("C")){
             cadenaCifrada(cadena,cesar);
+        } else if (opcion.startsWith("D")) {
+            cadenaDecifrada(cadena, cesar);
         }
-        if (opcion.startsWith("D")) {
-            descifrarCadena(cadena, cesar);
-        }
-        else {
+           else {
                 System.out.println("Opción fuera del rango, revise minúsculas y"
-                    + "mayúsculas");
+                    + " mayúsculas");
         }
     }
     
-    public static String cadenaCifrada(String cadenaSinCifrar, int numeroCesar){
+    public static void cadenaCifrada(String cadenaSinCifrar, int numeroCesar){
+        String aux1= "";
         for (int i = 0; i < cadenaSinCifrar.length(); i++){
             char aux = cadenaSinCifrar.charAt(i);
-            String aux1;
             aux += numeroCesar;  // Esta parte corre el caracter N espacios.
             aux1 += aux;
-            System.out.println(aux);
         }
+        System.out.println(aux1);
     }
-    
-    public static String descifrarCadena(String cadenaSinCifrar, int numeroCesar){
+    public static void cadenaDecifrada(String cadenaSinCifrar, int numeroCesar){
+        String aux1= "";
         for (int i = 0; i < cadenaSinCifrar.length(); i++){
             char aux = cadenaSinCifrar.charAt(i);
             aux -= numeroCesar;  // Esta parte corre el caracter N espacios.
-            System.out.println("aux = " + aux);
+            aux1 += aux;
         }
-    }
+        System.out.println(aux1);
+    } // Funciona bien, no entiendo por qué me sale error en esta línea...
+        
