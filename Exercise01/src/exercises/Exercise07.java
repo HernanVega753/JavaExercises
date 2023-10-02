@@ -23,6 +23,7 @@ package exercises;
 import java.util.Scanner;
 
 public class Exercise07 {
+
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         System.out.println("Ingrese la cadena");
@@ -32,34 +33,35 @@ public class Exercise07 {
         System.out.println("Presione \"C\" si quiere cifrar un mensaje, y "
                 + "presione \"D\" si quiere descifrarlo: ");
         String opcion = entrada.nextLine();
-        
-        if (opcion.startsWith("C")){
-            cadenaCifrada(cadena,cesar);
+
+        if (opcion.startsWith("C")) {
+            cadenaCifrada(cadena, cesar);
         } else if (opcion.startsWith("D")) {
             cadenaDecifrada(cadena, cesar);
-        }
-           else {
-                System.out.println("Opción fuera del rango, revise minúsculas y"
+        } else {
+            System.out.println("Opción fuera del rango, revise minúsculas y"
                     + " mayúsculas");
         }
     }
-    
-    public static void cadenaCifrada(String cadenaSinCifrar, int numeroCesar){
-        String aux1= "";
-        for (int i = 0; i < cadenaSinCifrar.length(); i++){
+
+    public static void cadenaCifrada(String cadenaSinCifrar, int numeroCesar) {
+        String aux1 = "";
+        for (int i = 0; i < cadenaSinCifrar.length(); i++) {
             char aux = cadenaSinCifrar.charAt(i);
             aux += numeroCesar;  // Esta parte corre el caracter N espacios.
             aux1 += aux;
         }
         System.out.println(aux1);
     }
-    public static void cadenaDecifrada(String cadenaSinCifrar, int numeroCesar){
-        String aux1= "";
-        for (int i = 0; i < cadenaSinCifrar.length(); i++){
+
+    public static void cadenaDecifrada(String cadenaSinCifrar, int numeroCesar) {
+        String aux1 = "";
+        for (int i = 0; i < cadenaSinCifrar.length(); i++) {
             char aux = cadenaSinCifrar.charAt(i);
             aux -= numeroCesar;  // Esta parte corre el caracter N espacios.
             aux1 += aux;
         }
         System.out.println(aux1);
-    } // Funciona bien, no entiendo por qué me sale error en esta línea...
+    }
+}
         
